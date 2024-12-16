@@ -1,0 +1,79 @@
+
+p{
+    font-size: 16px;
+    font-weight: 300;
+}
+
+p a{
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.work-cards{
+    display: flex;
+    align-items: center;
+    margin:3% 5%;
+    justify-content: space-between;
+}
+
+.work{
+    width: 30%;
+}
+.work p{
+    text-align: left;
+    font-size: 1rem;
+}
+.cards{
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+}
+.rev{
+    position: relative;
+    z-index: 4;
+}
+.rev p{
+    text-align: right;
+}
+.band{
+    background-color: #3c9139;
+}
+
+@media screen and (max-width:992px){
+    .work-cards{
+        flex-direction: column;
+        margin-bottom: 20px;
+    }
+    .rev{
+        flex-direction: column-reverse;
+        position: relative;
+    }
+    .work {
+        width: 100%;
+        margin: 20px;
+        
+    }
+    .work p{
+        text-align: center;
+    }
+    .cards{
+           overflow-x: auto; /* Enable horizontal scrolling */
+  scrollbar-width: none; /* Hides scrollbar in Firefox */
+        padding: 20px;
+        overflow-x: auto;
+    }
+    .cards::-webkit-scrollbar {
+        display: none; /* Hides scrollbar in WebKit browsers like Chrome, Safari */
+          }
+          .cards img{
+            margin-left: 10px;
+          }
+
+          .rev .work{
+            display: none;
+          }
+          .band{
+          position: absolute;
+           bottom: 10px;
+          }
+}
